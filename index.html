@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <dialog>
+        <div id="dialogBox">
+            <form id="bookForm" method="dialog"  onsubmit="createBook()">
+                <input id="title" type="text" required name="title" placeholder="Title">
+
+                <input id="author" type="text" required name="author" placeholder="Author">
+            
+                <input id="pageNumber" type="number" required name="pageNumber" placeholder="Number of Pages">
+            
+                <div>
+                    <label for="read">Have you read this book?</label>
+                    <input id="readBox" type="checkbox" name="read">
+                </div>
+                <button id="addButton" type="submit">Add Book</button>
+                <button id="exitButton" type="button" onclick="closeDialog()">Exit Form</button>
+            </form>
+        </div>
+    </dialog>
+    <div id="header">
+        <h1>Library</h1>
+        <button id="addBook" onclick="showDialog()">Add Book +</button>
+    </div>
+    <div id="content"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
